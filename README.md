@@ -1,9 +1,8 @@
-
+# Neares functional connected neighbour (NFCN)
 ![Image](https://github.com/heilandd/NFCN/blob/master/Img.png)
 
 
 
-# Neares functional connected neighbour (NFCN)
 
 This algorithm identifies the neares connected cell from a base and a target data set with respect to a defined receptor-ligand pair.
 (each an expression matrix with cells as colnames and genes as rownames)  
