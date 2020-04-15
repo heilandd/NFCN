@@ -1,4 +1,4 @@
-# Neares functional connected neighbour (NFCN)
+# Nearest functional connected neighbour (NFCN)
 ![Image](https://github.com/heilandd/NFCN/blob/master/Img.png)
 
 
