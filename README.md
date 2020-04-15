@@ -19,7 +19,7 @@ Xcode Command Line Tools or other C++ Compiler
 R-Software (https://cran.r-project.org)
 
 ```
-git clone https://username:password@github.com/heilandd/NFCN
+git clone https://github.com/heilandd/NFCN
 
 cd NFCN
 
