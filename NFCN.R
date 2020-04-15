@@ -41,6 +41,7 @@ if("--help" %in% args){
             \n --quantil_test: Which quantil of connected cells should be used for further anaysis Default=0.8
             \n --VisLabOutput: Return a Output of DE for VisLab Default=F (if T->  adapt --quantil_test to more than 0.9)
             "))
+  q()
 }else{
   
   #Call Arguments from bash
