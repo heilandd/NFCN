@@ -25,9 +25,24 @@ git clone https://username:password@github.com/heilandd/NFCN
 cd NFCN
 
 #Example:
-Rscript NFCN.R --Ligand IL10 --Receptor IL10RA,IL10RB --Gensets GS.txt --Matrix_basis Basis.txt --Matrix_target Target.txt --DimRed DimRed.txt
+Rscript NFCN.R --help
 
 ```
+
+#Input Parameter: 
+
+--Ligand: A string of the ligand genes. Example: IL10
+--Receptor: A string of the receptor genes. Example: IL10RA,IL10RB
+--Gensets: GeneSets: 
+            first row: Genes Induction (a geneSet that is responsible to induce the ligand expression)
+            second row: Genes Response (a geneSet that respond to a ligand activation)
+ --Matrix_basis: Gene Expression Matrix with cells as colnames and rawnames as rownames
+ --Matrix_target: Gene Expression Matrix with cells as colnames and rawnames as rownames
+ --DimRed: Matrix of Dimensional reduction of your cells (UMAP//TSNE...)
+ --Output: Output Folder
+ --quantil_test: Which quantil of connected cells should be used for further anaysis Default=0.8
+ --VisLabOutput: Return a Output of DE for VisLab Default=F (if T->  adapt --quantil_test to more than 0.9)
+
 
 In any case of problems send me the Error per mail.
 Dieter.henrik.heiland@uniklinik-freiburg.de
