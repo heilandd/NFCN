@@ -48,7 +48,7 @@ Dieter.henrik.heiland@uniklinik-freiburg.de
 
 ### Tutorial and Examples
 
-In the following section we show an example how you can use NFCN on you MAC/Linux (until now: Windows is not suported). First clone the github and install requirements. A RDS file containing all requirements is given in the folder requirements. The script install.R contains a function to run automaticly install all packages. 
+In the following section we provide an example of how you can use NFCN on your MAC/Linux (Windows is not supported) First clone the github and installation requirements. In the requirements file (.RDS) you will all requirements. The script install.R contains a function to install all packages automatically.
 
 
 #### Open your Terminal:
@@ -58,11 +58,11 @@ Rscript install.R
 
 ```
 
-Next, we select the data that we like to analyze. First a set of cells that reflect your basline cells. The algorithm uses this set of cells and look for connected cells of your target dataset. In other words, you filter a distinct subset of cells you are interested in and look for connected cells in the rest of your dataset. We need two gene expression matrizes where colnames reflect cells (if cells overlap between datasets you will end up with errors) and rownames are HUGO symbols. 
+Next, we select the data we want to analyze. First, a set of cells that reflect your basic cells. The algorithm uses this set of cells and scans for connected cells of your target data set. In other words, you filter a specific subset of cells you are interested in and find connected cells in the rest of your data set. We need two gene expression matrices in which the column names reflect the cells (if the cells overlap between data sets, you will get errors) and the row names are HUGO symbols. 
 
-Further, we look at a defined biological process, therefore we need to collect information regarding down- and up- stream activations. This information is sometimes hard to aquire but an essencial part of your success. For Example: 
+Since we are trying to simulate a defined biological process, we have to define information about activations in the downstream and upstream pathways accurately. This information is sometimes difficult to obtain, but it is an essential part of your success. An example: 
 
-We check the pair IFNG and IFNGR1 & IFNGR2, then we need a set of genes, which describe induction if IFNG (by the releaser cell) and IFNG response (by the receiver cell). Data need to be in a table where the first col contain induction genes and the second row contain response genes. Sometimes geneSets overlap (this will not create errors). 
+For example, if we want to study the interaction based on interferon gamma, we first need to define the interaction partners: the pair IFNG and IFNGR1 & IFNGR2. In addition, we need a set of genes that describe the induction of IFNG (by the releasing cell) and the IFNG response (by the receiving cell). The data has to be in a table where the first column contains induction genes and the second column contains response genes. Sometimes GeneSets overlap (this does not lead to errors). 
 
 | Induction  | Response    
 | ---------- |:---------:| 
