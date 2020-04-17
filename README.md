@@ -73,6 +73,32 @@ We check the pair IFNG and IFNGR1 & IFNGR2, then we need a set of genes, which d
 | IRF1       | CXCL9     |
 |  ...       | ...       |
 
+If you want to plot connections into your TSNE//UMAP, provide a table with Dim1 and Dim2 (HUGO genes as rownames). If you use seurat you can export the DimRed by: 
+
+```
+write.table(yourseurat@reductions$umap@cell.embeddings, "DimRed.txt")
+```
+From monocle:
+
+```
+write.table(reducedDims(yourcds)[["UMAP"]], "DimRed.txt")
+```
+
+Now, you have all your data, lets run the script.
+
+
+#### Open your Terminal:
+
+```
+Rscript NFCN.R --Ligand IFNG --Receptor IFNGR1,IFNGR2 --Gensets pathto/GS.txt --Matrix_basis pathto/Basis.txt --Matrix_target pathto/Target.txt --DimRed pathto/DimRed.txt
+
+
+```
+#### Pitfalls: 
+- Never put space if you use more than one receptor, allways use a "," to seperate.
+- Expression matrix, use the write.table() function from R to export  
+
+
 
 
 
