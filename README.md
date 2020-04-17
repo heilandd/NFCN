@@ -94,10 +94,20 @@ Rscript NFCN.R --Ligand IFNG --Receptor IFNGR1,IFNGR2 --Gensets pathto/GS.txt --
 
 
 ```
+
+You can export the most and less connected genes 0.5 and 99.5 quantil for DE analysis. We integrated an output file for the VisLab (a visualizer of gene expression data). This is helpful to further analze your data. Visit https://github.com/tumormetabolismfr/Vis_Lab1.5 for more information. 
+
+```
+ --VisLabOutput T
+
+```
+
+
 #### Pitfalls: 
 - Never put space if you use more than one receptor, allways use a "," to seperate.
 - Expression matrix, use the write.table() function from R to export  
-
+- Never use more cores than total nr of cores - 2 
+- If you use --VisLabOutput T also adapt the  --quantil_test parameter to 0.95 or higher. If your data set is very large (>10tsd cells) use 0.995 or 0.999 
 
 
 
