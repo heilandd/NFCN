@@ -46,6 +46,37 @@ Rscript NFCN.R --help
 In any case of problems send me the Error per mail.
 Dieter.henrik.heiland@uniklinik-freiburg.de
 
+### Tutorial and Examples
+
+In the following section we show an example how you can use NFCN on you MAC/Linux (until now: Windows is not suported). First clone the github and install requirements. A RDS file containing all requirements is given in the folder requirements. The script install.R contains a function to run automaticly install all packages. 
+
+
+#### Open your Terminal:
+
+```
+Rscript install.R
+
+```
+
+Next, we select the data that we like to analyze. First a set of cells that reflect your basline cells. The algorithm uses this set of cells and look for connected cells of your target dataset. In other words, you filter a distinct subset of cells you are interested in and look for connected cells in the rest of your dataset. We need two gene expression matrizes where colnames reflect cells (if cells overlap between datasets you will end up with errors) and rownames are HUGO symbols. 
+
+Further, we look at a defined biological process, therefore we need to collect information regarding down- and up- stream activations. This information is sometimes hard to aquire but an essencial part of your success. For Example: 
+
+We check the pair IFNG and IFNGR1 & IFNGR2, then we need a set of genes, which describe induction if IFNG (by the releaser cell) and IFNG response (by the receiver cell). Data need to be in a table where the first col contain induction genes and the second row contain response genes. Sometimes geneSets overlap (this will not create errors). 
+
+| Induction  | Response    
+| ---------- |:---------:| 
+| IFNAR1     | ADAR      | 
+| IFNAR2     | APOL6     |  
+| NFKB1      | CCL2      |    
+| JUN        | CD274     |
+| IRF1       | CXCL9     |
+|  ...       | ...       |
+
+
+
+
+
 
 ### Update:
 
