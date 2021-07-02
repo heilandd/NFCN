@@ -35,8 +35,8 @@ Rscript NFCN.R --help
 - --Gensets: GeneSets: 
             first row: Genes Induction (a geneSet that is responsible to induce the ligand expression)
             second row: Genes Response (a geneSet that respond to a ligand activation)
- - --Matrix_basis: Gene Expression Matrix with cells as colnames and rawnames as rownames
- -  --Matrix_target: Gene Expression Matrix with cells as colnames and rawnames as rownames
+ - --Matrix_basis: Gene Expression Matrix with cells as colnames and genes as rownames
+ - --Matrix_target: Gene Expression Matrix with cells as colnames and genes as rownames
  - --DimRed: Matrix of Dimensional reduction of your cells (UMAP//TSNE...)
  - --Output: Output Folder
  - --quantil_test: Which quantil of connected cells should be used for further anaysis Default=0.8
